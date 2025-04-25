@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import config from "./config.json";
 
 const popcorns = [
-	{ id: "caramel", name: "Caramel Popcorn", image: "/images/caramel-popcorn.png" },
+	{ id: "kettlecorn", name: "Kettlecorn Popcorn", image: "/images/caramel-popcorn.png" },
 	{ id: "regular", name: "Regular Popcorn", image: "/images/regular-popcorn.png" },
 ];
 
@@ -42,7 +43,7 @@ export default function FoodOrdering() {
 
 		if (orderItems.length > 0) {
 			try {
-				const response = await fetch("http://192.168.1.126:8000/order", {
+				const response = await fetch(`${config.backend_url}/order`, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({ items: orderItems }),

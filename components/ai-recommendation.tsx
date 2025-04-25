@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion, AnimatePresence } from "framer-motion";
+import config from "./config.json";
 
 interface Recommendation {
 	message: string;
@@ -18,7 +19,7 @@ export default function AIRecommendation() {
 	useEffect(() => {
 		const poll = async () => {
 			try {
-				const res = await fetch("http://192.168.1.126:8001/suggestion");
+				const res = await fetch(`${config.cameraai_url}/suggestion`);
 				const data = await res.json();
 
 				if (data.available && isMounted.current) {
