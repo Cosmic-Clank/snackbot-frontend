@@ -1,4 +1,6 @@
 {
-	"backend_url": "http://129.21.110.218:8000",
+	"backend_url": "http://127.0.0.1:8000",
+	"backend_popcorn_url": "http://127.0.0.1:8000",
+	"backend_drink_url": "http://",
 	"cameraai_url": ""
 }

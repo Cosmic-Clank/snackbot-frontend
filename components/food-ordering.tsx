@@ -14,8 +14,8 @@ const popcorns = [
 ];
 
 const drinks = [
-	{ id: "orange-juice", name: "Orange Juice", image: "/images/orange-juice.png" },
-	{ id: "coke", name: "Coke", image: "/images/coke.png" },
+	{ id: "cran-berry-juice", name: "Cran Berry Juice", image: "/images/orange-juice.png" },
+	{ id: "apple-juice", name: "Apple Juice", image: "/images/coke.png" },
 	{ id: "espresso", name: "Espresso", image: "/images/espresso.png" },
 	{ id: "black-coffee", name: "Black Coffee", image: "/images/black-coffee.png" },
 ];

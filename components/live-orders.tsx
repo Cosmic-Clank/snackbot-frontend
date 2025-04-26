@@ -35,7 +35,7 @@ export default function LiveOrders() {
 		};
 
 		fetchOrders();
-		const interval = setInterval(fetchOrders, 2000);
+		const interval = setInterval(fetchOrders, 5000);
 		return () => clearInterval(interval);
 	}, []);
 
